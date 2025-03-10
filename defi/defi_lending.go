@@ -31,7 +31,7 @@ var (
 
 // DefiMetaData contains all meta data concerning the Defi contract.
 var DefiMetaData = &bind.MetaData{
-	ABI: "[{\"type\":\"function\",\"name\":\"UPGRADE_INTERFACE_VERSION\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"string\",\"internalType\":\"string\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"borrow\",\"inputs\":[{\"name\":\"amount\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"borrows\",\"inputs\":[{\"name\":\"\",\"type\":\"address\",\"internalType\":\"address\"}],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"deposit\",\"inputs\":[{\"name\":\"amount\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"deposits\",\"inputs\":[{\"name\":\"\",\"type\":\"address\",\"internalType\":\"address\"}],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"initialize\",\"inputs\":[{\"name\":\"_token\",\"type\":\"address\",\"internalType\":\"address\"}],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"interestRate\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"liquidate\",\"inputs\":[{\"name\":\"user\",\"type\":\"address\",\"internalType\":\"address\"}],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"liquidationThreshold\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"owner\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"address\",\"internalType\":\"address\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"proxiableUUID\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\",\"internalType\":\"bytes32\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"renounceOwnership\",\"inputs\":[],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"repay\",\"inputs\":[{\"name\":\"amount\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"token\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"address\",\"internalType\":\"contractIERC20\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"totalBorrows\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"totalDeposits\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"transferOwnership\",\"inputs\":[{\"name\":\"newOwner\",\"type\":\"address\",\"internalType\":\"address\"}],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"upgradeToAndCall\",\"inputs\":[{\"name\":\"newImplementation\",\"type\":\"address\",\"internalType\":\"address\"},{\"name\":\"data\",\"type\":\"bytes\",\"internalType\":\"bytes\"}],\"outputs\":[],\"stateMutability\":\"payable\"},{\"type\":\"event\",\"name\":\"Borrowed\",\"inputs\":[{\"name\":\"user\",\"type\":\"address\",\"indexed\":true,\"internalType\":\"address\"},{\"name\":\"amount\",\"type\":\"uint256\",\"indexed\":false,\"internalType\":\"uint256\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"Deposited\",\"inputs\":[{\"name\":\"user\",\"type\":\"address\",\"indexed\":true,\"internalType\":\"address\"},{\"name\":\"amount\",\"type\":\"uint256\",\"indexed\":false,\"internalType\":\"uint256\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"Initialized\",\"inputs\":[{\"name\":\"version\",\"type\":\"uint64\",\"indexed\":false,\"internalType\":\"uint64\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"Liquidated\",\"inputs\":[{\"name\":\"user\",\"type\":\"address\",\"indexed\":true,\"internalType\":\"address\"},{\"name\":\"amount\",\"type\":\"uint256\",\"indexed\":false,\"internalType\":\"uint256\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"OwnershipTransferred\",\"inputs\":[{\"name\":\"previousOwner\",\"type\":\"address\",\"indexed\":true,\"internalType\":\"address\"},{\"name\":\"newOwner\",\"type\":\"address\",\"indexed\":true,\"internalType\":\"address\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"Repaid\",\"inputs\":[{\"name\":\"user\",\"type\":\"address\",\"indexed\":true,\"internalType\":\"address\"},{\"name\":\"amount\",\"type\":\"uint256\",\"indexed\":false,\"internalType\":\"uint256\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"Upgraded\",\"inputs\":[{\"name\":\"implementation\",\"type\":\"address\",\"indexed\":true,\"internalType\":\"address\"}],\"anonymous\":false},{\"type\":\"error\",\"name\":\"AddressEmptyCode\",\"inputs\":[{\"name\":\"target\",\"type\":\"address\",\"internalType\":\"address\"}]},{\"type\":\"error\",\"name\":\"ERC1967InvalidImplementation\",\"inputs\":[{\"name\":\"implementation\",\"type\":\"address\",\"internalType\":\"address\"}]},{\"type\":\"error\",\"name\":\"ERC1967NonPayable\",\"inputs\":[]},{\"type\":\"error\",\"name\":\"FailedCall\",\"inputs\":[]},{\"type\":\"error\",\"name\":\"InvalidInitialization\",\"inputs\":[]},{\"type\":\"error\",\"name\":\"NotInitializing\",\"inputs\":[]},{\"type\":\"error\",\"name\":\"OwnableInvalidOwner\",\"inputs\":[{\"name\":\"owner\",\"type\":\"address\",\"internalType\":\"address\"}]},{\"type\":\"error\",\"name\":\"OwnableUnauthorizedAccount\",\"inputs\":[{\"name\":\"account\",\"type\":\"address\",\"internalType\":\"address\"}]},{\"type\":\"error\",\"name\":\"UUPSUnauthorizedCallContext\",\"inputs\":[]},{\"type\":\"error\",\"name\":\"UUPSUnsupportedProxiableUUID\",\"inputs\":[{\"name\":\"slot\",\"type\":\"bytes32\",\"internalType\":\"bytes32\"}]}]",
+	ABI: "[{\"type\":\"function\",\"name\":\"UPGRADE_INTERFACE_VERSION\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"string\",\"internalType\":\"string\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"borrow\",\"inputs\":[{\"name\":\"amount\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"borrows\",\"inputs\":[{\"name\":\"\",\"type\":\"address\",\"internalType\":\"address\"}],\"outputs\":[{\"name\":\"principal\",\"type\":\"uint256\",\"internalType\":\"uint256\"},{\"name\":\"lastAccrued\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"deposit\",\"inputs\":[{\"name\":\"amount\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"depositIndex\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"depositShares\",\"inputs\":[{\"name\":\"\",\"type\":\"address\",\"internalType\":\"address\"}],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"deposits\",\"inputs\":[{\"name\":\"\",\"type\":\"address\",\"internalType\":\"address\"}],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"initialize\",\"inputs\":[{\"name\":\"_token\",\"type\":\"address\",\"internalType\":\"address\"}],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"interestRate\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"liquidate\",\"inputs\":[{\"name\":\"user\",\"type\":\"address\",\"internalType\":\"address\"}],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"liquidationThreshold\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"owner\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"address\",\"internalType\":\"address\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"proxiableUUID\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"bytes32\",\"internalType\":\"bytes32\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"renounceOwnership\",\"inputs\":[],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"repay\",\"inputs\":[{\"name\":\"amount\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"token\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"address\",\"internalType\":\"contractIERC20\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"totalBorrows\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"totalDepositShares\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"totalDeposits\",\"inputs\":[],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"transferOwnership\",\"inputs\":[{\"name\":\"newOwner\",\"type\":\"address\",\"internalType\":\"address\"}],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"function\",\"name\":\"upgradeToAndCall\",\"inputs\":[{\"name\":\"newImplementation\",\"type\":\"address\",\"internalType\":\"address\"},{\"name\":\"data\",\"type\":\"bytes\",\"internalType\":\"bytes\"}],\"outputs\":[],\"stateMutability\":\"payable\"},{\"type\":\"function\",\"name\":\"verifyInterest\",\"inputs\":[{\"name\":\"borrower\",\"type\":\"address\",\"internalType\":\"address\"}],\"outputs\":[{\"name\":\"\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"stateMutability\":\"view\"},{\"type\":\"function\",\"name\":\"withdraw\",\"inputs\":[{\"name\":\"shares\",\"type\":\"uint256\",\"internalType\":\"uint256\"}],\"outputs\":[],\"stateMutability\":\"nonpayable\"},{\"type\":\"event\",\"name\":\"Borrowed\",\"inputs\":[{\"name\":\"user\",\"type\":\"address\",\"indexed\":true,\"internalType\":\"address\"},{\"name\":\"amount\",\"type\":\"uint256\",\"indexed\":false,\"internalType\":\"uint256\"},{\"name\":\"newPrincipal\",\"type\":\"uint256\",\"indexed\":false,\"internalType\":\"uint256\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"Deposited\",\"inputs\":[{\"name\":\"user\",\"type\":\"address\",\"indexed\":true,\"internalType\":\"address\"},{\"name\":\"amount\",\"type\":\"uint256\",\"indexed\":false,\"internalType\":\"uint256\"},{\"name\":\"shares\",\"type\":\"uint256\",\"indexed\":false,\"internalType\":\"uint256\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"Initialized\",\"inputs\":[{\"name\":\"version\",\"type\":\"uint64\",\"indexed\":false,\"internalType\":\"uint64\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"Liquidated\",\"inputs\":[{\"name\":\"user\",\"type\":\"address\",\"indexed\":true,\"internalType\":\"address\"},{\"name\":\"collateralSeized\",\"type\":\"uint256\",\"indexed\":false,\"internalType\":\"uint256\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"OwnershipTransferred\",\"inputs\":[{\"name\":\"previousOwner\",\"type\":\"address\",\"indexed\":true,\"internalType\":\"address\"},{\"name\":\"newOwner\",\"type\":\"address\",\"indexed\":true,\"internalType\":\"address\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"Repaid\",\"inputs\":[{\"name\":\"user\",\"type\":\"address\",\"indexed\":true,\"internalType\":\"address\"},{\"name\":\"amount\",\"type\":\"uint256\",\"indexed\":false,\"internalType\":\"uint256\"},{\"name\":\"remainingPrincipal\",\"type\":\"uint256\",\"indexed\":false,\"internalType\":\"uint256\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"Upgraded\",\"inputs\":[{\"name\":\"implementation\",\"type\":\"address\",\"indexed\":true,\"internalType\":\"address\"}],\"anonymous\":false},{\"type\":\"event\",\"name\":\"Withdrawn\",\"inputs\":[{\"name\":\"user\",\"type\":\"address\",\"indexed\":true,\"internalType\":\"address\"},{\"name\":\"amount\",\"type\":\"uint256\",\"indexed\":false,\"internalType\":\"uint256\"},{\"name\":\"shares\",\"type\":\"uint256\",\"indexed\":false,\"internalType\":\"uint256\"}],\"anonymous\":false},{\"type\":\"error\",\"name\":\"AddressEmptyCode\",\"inputs\":[{\"name\":\"target\",\"type\":\"address\",\"internalType\":\"address\"}]},{\"type\":\"error\",\"name\":\"ERC1967InvalidImplementation\",\"inputs\":[{\"name\":\"implementation\",\"type\":\"address\",\"internalType\":\"address\"}]},{\"type\":\"error\",\"name\":\"ERC1967NonPayable\",\"inputs\":[]},{\"type\":\"error\",\"name\":\"FailedCall\",\"inputs\":[]},{\"type\":\"error\",\"name\":\"InvalidInitialization\",\"inputs\":[]},{\"type\":\"error\",\"name\":\"NotInitializing\",\"inputs\":[]},{\"type\":\"error\",\"name\":\"OwnableInvalidOwner\",\"inputs\":[{\"name\":\"owner\",\"type\":\"address\",\"internalType\":\"address\"}]},{\"type\":\"error\",\"name\":\"OwnableUnauthorizedAccount\",\"inputs\":[{\"name\":\"account\",\"type\":\"address\",\"internalType\":\"address\"}]},{\"type\":\"error\",\"name\":\"UUPSUnauthorizedCallContext\",\"inputs\":[]},{\"type\":\"error\",\"name\":\"UUPSUnsupportedProxiableUUID\",\"inputs\":[{\"name\":\"slot\",\"type\":\"bytes32\",\"internalType\":\"bytes32\"}]}]",
 }
 
 // DefiABI is the input ABI used to generate the binding from.
@@ -213,10 +213,55 @@ func (_Defi *DefiCallerSession) UPGRADEINTERFACEVERSION() (string, error) {
 
 // Borrows is a free data retrieval call binding the contract method 0x54a5706f.
 //
-// Solidity: function borrows(address ) view returns(uint256)
-func (_Defi *DefiCaller) Borrows(opts *bind.CallOpts, arg0 common.Address) (*big.Int, error) {
+// Solidity: function borrows(address ) view returns(uint256 principal, uint256 lastAccrued)
+func (_Defi *DefiCaller) Borrows(opts *bind.CallOpts, arg0 common.Address) (struct {
+	Principal   *big.Int
+	LastAccrued *big.Int
+}, error) {
 	var out []interface{}
 	err := _Defi.contract.Call(opts, &out, "borrows", arg0)
+
+	outstruct := new(struct {
+		Principal   *big.Int
+		LastAccrued *big.Int
+	})
+	if err != nil {
+		return *outstruct, err
+	}
+
+	outstruct.Principal = *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+	outstruct.LastAccrued = *abi.ConvertType(out[1], new(*big.Int)).(**big.Int)
+
+	return *outstruct, err
+
+}
+
+// Borrows is a free data retrieval call binding the contract method 0x54a5706f.
+//
+// Solidity: function borrows(address ) view returns(uint256 principal, uint256 lastAccrued)
+func (_Defi *DefiSession) Borrows(arg0 common.Address) (struct {
+	Principal   *big.Int
+	LastAccrued *big.Int
+}, error) {
+	return _Defi.Contract.Borrows(&_Defi.CallOpts, arg0)
+}
+
+// Borrows is a free data retrieval call binding the contract method 0x54a5706f.
+//
+// Solidity: function borrows(address ) view returns(uint256 principal, uint256 lastAccrued)
+func (_Defi *DefiCallerSession) Borrows(arg0 common.Address) (struct {
+	Principal   *big.Int
+	LastAccrued *big.Int
+}, error) {
+	return _Defi.Contract.Borrows(&_Defi.CallOpts, arg0)
+}
+
+// DepositIndex is a free data retrieval call binding the contract method 0x7b898939.
+//
+// Solidity: function depositIndex() view returns(uint256)
+func (_Defi *DefiCaller) DepositIndex(opts *bind.CallOpts) (*big.Int, error) {
+	var out []interface{}
+	err := _Defi.contract.Call(opts, &out, "depositIndex")
 
 	if err != nil {
 		return *new(*big.Int), err
@@ -228,18 +273,49 @@ func (_Defi *DefiCaller) Borrows(opts *bind.CallOpts, arg0 common.Address) (*big
 
 }
 
-// Borrows is a free data retrieval call binding the contract method 0x54a5706f.
+// DepositIndex is a free data retrieval call binding the contract method 0x7b898939.
 //
-// Solidity: function borrows(address ) view returns(uint256)
-func (_Defi *DefiSession) Borrows(arg0 common.Address) (*big.Int, error) {
-	return _Defi.Contract.Borrows(&_Defi.CallOpts, arg0)
+// Solidity: function depositIndex() view returns(uint256)
+func (_Defi *DefiSession) DepositIndex() (*big.Int, error) {
+	return _Defi.Contract.DepositIndex(&_Defi.CallOpts)
 }
 
-// Borrows is a free data retrieval call binding the contract method 0x54a5706f.
+// DepositIndex is a free data retrieval call binding the contract method 0x7b898939.
 //
-// Solidity: function borrows(address ) view returns(uint256)
-func (_Defi *DefiCallerSession) Borrows(arg0 common.Address) (*big.Int, error) {
-	return _Defi.Contract.Borrows(&_Defi.CallOpts, arg0)
+// Solidity: function depositIndex() view returns(uint256)
+func (_Defi *DefiCallerSession) DepositIndex() (*big.Int, error) {
+	return _Defi.Contract.DepositIndex(&_Defi.CallOpts)
+}
+
+// DepositShares is a free data retrieval call binding the contract method 0x63c93998.
+//
+// Solidity: function depositShares(address ) view returns(uint256)
+func (_Defi *DefiCaller) DepositShares(opts *bind.CallOpts, arg0 common.Address) (*big.Int, error) {
+	var out []interface{}
+	err := _Defi.contract.Call(opts, &out, "depositShares", arg0)
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// DepositShares is a free data retrieval call binding the contract method 0x63c93998.
+//
+// Solidity: function depositShares(address ) view returns(uint256)
+func (_Defi *DefiSession) DepositShares(arg0 common.Address) (*big.Int, error) {
+	return _Defi.Contract.DepositShares(&_Defi.CallOpts, arg0)
+}
+
+// DepositShares is a free data retrieval call binding the contract method 0x63c93998.
+//
+// Solidity: function depositShares(address ) view returns(uint256)
+func (_Defi *DefiCallerSession) DepositShares(arg0 common.Address) (*big.Int, error) {
+	return _Defi.Contract.DepositShares(&_Defi.CallOpts, arg0)
 }
 
 // Deposits is a free data retrieval call binding the contract method 0xfc7e286d.
@@ -459,6 +535,37 @@ func (_Defi *DefiCallerSession) TotalBorrows() (*big.Int, error) {
 	return _Defi.Contract.TotalBorrows(&_Defi.CallOpts)
 }
 
+// TotalDepositShares is a free data retrieval call binding the contract method 0x54a3966d.
+//
+// Solidity: function totalDepositShares() view returns(uint256)
+func (_Defi *DefiCaller) TotalDepositShares(opts *bind.CallOpts) (*big.Int, error) {
+	var out []interface{}
+	err := _Defi.contract.Call(opts, &out, "totalDepositShares")
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// TotalDepositShares is a free data retrieval call binding the contract method 0x54a3966d.
+//
+// Solidity: function totalDepositShares() view returns(uint256)
+func (_Defi *DefiSession) TotalDepositShares() (*big.Int, error) {
+	return _Defi.Contract.TotalDepositShares(&_Defi.CallOpts)
+}
+
+// TotalDepositShares is a free data retrieval call binding the contract method 0x54a3966d.
+//
+// Solidity: function totalDepositShares() view returns(uint256)
+func (_Defi *DefiCallerSession) TotalDepositShares() (*big.Int, error) {
+	return _Defi.Contract.TotalDepositShares(&_Defi.CallOpts)
+}
+
 // TotalDeposits is a free data retrieval call binding the contract method 0x7d882097.
 //
 // Solidity: function totalDeposits() view returns(uint256)
@@ -488,6 +595,37 @@ func (_Defi *DefiSession) TotalDeposits() (*big.Int, error) {
 // Solidity: function totalDeposits() view returns(uint256)
 func (_Defi *DefiCallerSession) TotalDeposits() (*big.Int, error) {
 	return _Defi.Contract.TotalDeposits(&_Defi.CallOpts)
+}
+
+// VerifyInterest is a free data retrieval call binding the contract method 0xf18cc798.
+//
+// Solidity: function verifyInterest(address borrower) view returns(uint256)
+func (_Defi *DefiCaller) VerifyInterest(opts *bind.CallOpts, borrower common.Address) (*big.Int, error) {
+	var out []interface{}
+	err := _Defi.contract.Call(opts, &out, "verifyInterest", borrower)
+
+	if err != nil {
+		return *new(*big.Int), err
+	}
+
+	out0 := *abi.ConvertType(out[0], new(*big.Int)).(**big.Int)
+
+	return out0, err
+
+}
+
+// VerifyInterest is a free data retrieval call binding the contract method 0xf18cc798.
+//
+// Solidity: function verifyInterest(address borrower) view returns(uint256)
+func (_Defi *DefiSession) VerifyInterest(borrower common.Address) (*big.Int, error) {
+	return _Defi.Contract.VerifyInterest(&_Defi.CallOpts, borrower)
+}
+
+// VerifyInterest is a free data retrieval call binding the contract method 0xf18cc798.
+//
+// Solidity: function verifyInterest(address borrower) view returns(uint256)
+func (_Defi *DefiCallerSession) VerifyInterest(borrower common.Address) (*big.Int, error) {
+	return _Defi.Contract.VerifyInterest(&_Defi.CallOpts, borrower)
 }
 
 // Borrow is a paid mutator transaction binding the contract method 0xc5ebeaec.
@@ -658,6 +796,27 @@ func (_Defi *DefiTransactorSession) UpgradeToAndCall(newImplementation common.Ad
 	return _Defi.Contract.UpgradeToAndCall(&_Defi.TransactOpts, newImplementation, data)
 }
 
+// Withdraw is a paid mutator transaction binding the contract method 0x2e1a7d4d.
+//
+// Solidity: function withdraw(uint256 shares) returns()
+func (_Defi *DefiTransactor) Withdraw(opts *bind.TransactOpts, shares *big.Int) (*types.Transaction, error) {
+	return _Defi.contract.Transact(opts, "withdraw", shares)
+}
+
+// Withdraw is a paid mutator transaction binding the contract method 0x2e1a7d4d.
+//
+// Solidity: function withdraw(uint256 shares) returns()
+func (_Defi *DefiSession) Withdraw(shares *big.Int) (*types.Transaction, error) {
+	return _Defi.Contract.Withdraw(&_Defi.TransactOpts, shares)
+}
+
+// Withdraw is a paid mutator transaction binding the contract method 0x2e1a7d4d.
+//
+// Solidity: function withdraw(uint256 shares) returns()
+func (_Defi *DefiTransactorSession) Withdraw(shares *big.Int) (*types.Transaction, error) {
+	return _Defi.Contract.Withdraw(&_Defi.TransactOpts, shares)
+}
+
 // DefiBorrowedIterator is returned from FilterBorrowed and is used to iterate over the raw logs and unpacked data for Borrowed events raised by the Defi contract.
 type DefiBorrowedIterator struct {
 	Event *DefiBorrowed // Event containing the contract specifics and raw log
@@ -727,14 +886,15 @@ func (it *DefiBorrowedIterator) Close() error {
 
 // DefiBorrowed represents a Borrowed event raised by the Defi contract.
 type DefiBorrowed struct {
-	User   common.Address
-	Amount *big.Int
-	Raw    types.Log // Blockchain specific contextual infos
+	User         common.Address
+	Amount       *big.Int
+	NewPrincipal *big.Int
+	Raw          types.Log // Blockchain specific contextual infos
 }
 
-// FilterBorrowed is a free log retrieval operation binding the contract event 0xac59582e5396aca512fa873a2047e7f4c80f8f55d4a06cb34a78a0187f62719f.
+// FilterBorrowed is a free log retrieval operation binding the contract event 0xeae9cfbc77fdd40ca899f36b608256063b2bc9d8178b0220f7ad513e178d6730.
 //
-// Solidity: event Borrowed(address indexed user, uint256 amount)
+// Solidity: event Borrowed(address indexed user, uint256 amount, uint256 newPrincipal)
 func (_Defi *DefiFilterer) FilterBorrowed(opts *bind.FilterOpts, user []common.Address) (*DefiBorrowedIterator, error) {
 
 	var userRule []interface{}
@@ -749,9 +909,9 @@ func (_Defi *DefiFilterer) FilterBorrowed(opts *bind.FilterOpts, user []common.A
 	return &DefiBorrowedIterator{contract: _Defi.contract, event: "Borrowed", logs: logs, sub: sub}, nil
 }
 
-// WatchBorrowed is a free log subscription operation binding the contract event 0xac59582e5396aca512fa873a2047e7f4c80f8f55d4a06cb34a78a0187f62719f.
+// WatchBorrowed is a free log subscription operation binding the contract event 0xeae9cfbc77fdd40ca899f36b608256063b2bc9d8178b0220f7ad513e178d6730.
 //
-// Solidity: event Borrowed(address indexed user, uint256 amount)
+// Solidity: event Borrowed(address indexed user, uint256 amount, uint256 newPrincipal)
 func (_Defi *DefiFilterer) WatchBorrowed(opts *bind.WatchOpts, sink chan<- *DefiBorrowed, user []common.Address) (event.Subscription, error) {
 
 	var userRule []interface{}
@@ -791,9 +951,9 @@ func (_Defi *DefiFilterer) WatchBorrowed(opts *bind.WatchOpts, sink chan<- *Defi
 	}), nil
 }
 
-// ParseBorrowed is a log parse operation binding the contract event 0xac59582e5396aca512fa873a2047e7f4c80f8f55d4a06cb34a78a0187f62719f.
+// ParseBorrowed is a log parse operation binding the contract event 0xeae9cfbc77fdd40ca899f36b608256063b2bc9d8178b0220f7ad513e178d6730.
 //
-// Solidity: event Borrowed(address indexed user, uint256 amount)
+// Solidity: event Borrowed(address indexed user, uint256 amount, uint256 newPrincipal)
 func (_Defi *DefiFilterer) ParseBorrowed(log types.Log) (*DefiBorrowed, error) {
 	event := new(DefiBorrowed)
 	if err := _Defi.contract.UnpackLog(event, "Borrowed", log); err != nil {
@@ -874,12 +1034,13 @@ func (it *DefiDepositedIterator) Close() error {
 type DefiDeposited struct {
 	User   common.Address
 	Amount *big.Int
+	Shares *big.Int
 	Raw    types.Log // Blockchain specific contextual infos
 }
 
-// FilterDeposited is a free log retrieval operation binding the contract event 0x2da466a7b24304f47e87fa2e1e5a81b9831ce54fec19055ce277ca2f39ba42c4.
+// FilterDeposited is a free log retrieval operation binding the contract event 0x73a19dd210f1a7f902193214c0ee91dd35ee5b4d920cba8d519eca65a7b488ca.
 //
-// Solidity: event Deposited(address indexed user, uint256 amount)
+// Solidity: event Deposited(address indexed user, uint256 amount, uint256 shares)
 func (_Defi *DefiFilterer) FilterDeposited(opts *bind.FilterOpts, user []common.Address) (*DefiDepositedIterator, error) {
 
 	var userRule []interface{}
@@ -894,9 +1055,9 @@ func (_Defi *DefiFilterer) FilterDeposited(opts *bind.FilterOpts, user []common.
 	return &DefiDepositedIterator{contract: _Defi.contract, event: "Deposited", logs: logs, sub: sub}, nil
 }
 
-// WatchDeposited is a free log subscription operation binding the contract event 0x2da466a7b24304f47e87fa2e1e5a81b9831ce54fec19055ce277ca2f39ba42c4.
+// WatchDeposited is a free log subscription operation binding the contract event 0x73a19dd210f1a7f902193214c0ee91dd35ee5b4d920cba8d519eca65a7b488ca.
 //
-// Solidity: event Deposited(address indexed user, uint256 amount)
+// Solidity: event Deposited(address indexed user, uint256 amount, uint256 shares)
 func (_Defi *DefiFilterer) WatchDeposited(opts *bind.WatchOpts, sink chan<- *DefiDeposited, user []common.Address) (event.Subscription, error) {
 
 	var userRule []interface{}
@@ -936,9 +1097,9 @@ func (_Defi *DefiFilterer) WatchDeposited(opts *bind.WatchOpts, sink chan<- *Def
 	}), nil
 }
 
-// ParseDeposited is a log parse operation binding the contract event 0x2da466a7b24304f47e87fa2e1e5a81b9831ce54fec19055ce277ca2f39ba42c4.
+// ParseDeposited is a log parse operation binding the contract event 0x73a19dd210f1a7f902193214c0ee91dd35ee5b4d920cba8d519eca65a7b488ca.
 //
-// Solidity: event Deposited(address indexed user, uint256 amount)
+// Solidity: event Deposited(address indexed user, uint256 amount, uint256 shares)
 func (_Defi *DefiFilterer) ParseDeposited(log types.Log) (*DefiDeposited, error) {
 	event := new(DefiDeposited)
 	if err := _Defi.contract.UnpackLog(event, "Deposited", log); err != nil {
@@ -1151,14 +1312,14 @@ func (it *DefiLiquidatedIterator) Close() error {
 
 // DefiLiquidated represents a Liquidated event raised by the Defi contract.
 type DefiLiquidated struct {
-	User   common.Address
-	Amount *big.Int
-	Raw    types.Log // Blockchain specific contextual infos
+	User             common.Address
+	CollateralSeized *big.Int
+	Raw              types.Log // Blockchain specific contextual infos
 }
 
 // FilterLiquidated is a free log retrieval operation binding the contract event 0xa5ee7a2b0254fce91deed604506790ed7fa072d0b14cba4859c3bc8955b9caac.
 //
-// Solidity: event Liquidated(address indexed user, uint256 amount)
+// Solidity: event Liquidated(address indexed user, uint256 collateralSeized)
 func (_Defi *DefiFilterer) FilterLiquidated(opts *bind.FilterOpts, user []common.Address) (*DefiLiquidatedIterator, error) {
 
 	var userRule []interface{}
@@ -1175,7 +1336,7 @@ func (_Defi *DefiFilterer) FilterLiquidated(opts *bind.FilterOpts, user []common
 
 // WatchLiquidated is a free log subscription operation binding the contract event 0xa5ee7a2b0254fce91deed604506790ed7fa072d0b14cba4859c3bc8955b9caac.
 //
-// Solidity: event Liquidated(address indexed user, uint256 amount)
+// Solidity: event Liquidated(address indexed user, uint256 collateralSeized)
 func (_Defi *DefiFilterer) WatchLiquidated(opts *bind.WatchOpts, sink chan<- *DefiLiquidated, user []common.Address) (event.Subscription, error) {
 
 	var userRule []interface{}
@@ -1217,7 +1378,7 @@ func (_Defi *DefiFilterer) WatchLiquidated(opts *bind.WatchOpts, sink chan<- *De
 
 // ParseLiquidated is a log parse operation binding the contract event 0xa5ee7a2b0254fce91deed604506790ed7fa072d0b14cba4859c3bc8955b9caac.
 //
-// Solidity: event Liquidated(address indexed user, uint256 amount)
+// Solidity: event Liquidated(address indexed user, uint256 collateralSeized)
 func (_Defi *DefiFilterer) ParseLiquidated(log types.Log) (*DefiLiquidated, error) {
 	event := new(DefiLiquidated)
 	if err := _Defi.contract.UnpackLog(event, "Liquidated", log); err != nil {
@@ -1449,14 +1610,15 @@ func (it *DefiRepaidIterator) Close() error {
 
 // DefiRepaid represents a Repaid event raised by the Defi contract.
 type DefiRepaid struct {
-	User   common.Address
-	Amount *big.Int
-	Raw    types.Log // Blockchain specific contextual infos
+	User               common.Address
+	Amount             *big.Int
+	RemainingPrincipal *big.Int
+	Raw                types.Log // Blockchain specific contextual infos
 }
 
-// FilterRepaid is a free log retrieval operation binding the contract event 0x0516911bcc3a0a7412a44601057c0a0a1ec628bde049a84284bc428866534488.
+// FilterRepaid is a free log retrieval operation binding the contract event 0x1b8cd61ed43bec7c6bdad3a18ffee613f99c853d16c50678d248d879e1b43438.
 //
-// Solidity: event Repaid(address indexed user, uint256 amount)
+// Solidity: event Repaid(address indexed user, uint256 amount, uint256 remainingPrincipal)
 func (_Defi *DefiFilterer) FilterRepaid(opts *bind.FilterOpts, user []common.Address) (*DefiRepaidIterator, error) {
 
 	var userRule []interface{}
@@ -1471,9 +1633,9 @@ func (_Defi *DefiFilterer) FilterRepaid(opts *bind.FilterOpts, user []common.Add
 	return &DefiRepaidIterator{contract: _Defi.contract, event: "Repaid", logs: logs, sub: sub}, nil
 }
 
-// WatchRepaid is a free log subscription operation binding the contract event 0x0516911bcc3a0a7412a44601057c0a0a1ec628bde049a84284bc428866534488.
+// WatchRepaid is a free log subscription operation binding the contract event 0x1b8cd61ed43bec7c6bdad3a18ffee613f99c853d16c50678d248d879e1b43438.
 //
-// Solidity: event Repaid(address indexed user, uint256 amount)
+// Solidity: event Repaid(address indexed user, uint256 amount, uint256 remainingPrincipal)
 func (_Defi *DefiFilterer) WatchRepaid(opts *bind.WatchOpts, sink chan<- *DefiRepaid, user []common.Address) (event.Subscription, error) {
 
 	var userRule []interface{}
@@ -1513,9 +1675,9 @@ func (_Defi *DefiFilterer) WatchRepaid(opts *bind.WatchOpts, sink chan<- *DefiRe
 	}), nil
 }
 
-// ParseRepaid is a log parse operation binding the contract event 0x0516911bcc3a0a7412a44601057c0a0a1ec628bde049a84284bc428866534488.
+// ParseRepaid is a log parse operation binding the contract event 0x1b8cd61ed43bec7c6bdad3a18ffee613f99c853d16c50678d248d879e1b43438.
 //
-// Solidity: event Repaid(address indexed user, uint256 amount)
+// Solidity: event Repaid(address indexed user, uint256 amount, uint256 remainingPrincipal)
 func (_Defi *DefiFilterer) ParseRepaid(log types.Log) (*DefiRepaid, error) {
 	event := new(DefiRepaid)
 	if err := _Defi.contract.UnpackLog(event, "Repaid", log); err != nil {
@@ -1663,6 +1825,152 @@ func (_Defi *DefiFilterer) WatchUpgraded(opts *bind.WatchOpts, sink chan<- *Defi
 func (_Defi *DefiFilterer) ParseUpgraded(log types.Log) (*DefiUpgraded, error) {
 	event := new(DefiUpgraded)
 	if err := _Defi.contract.UnpackLog(event, "Upgraded", log); err != nil {
+		return nil, err
+	}
+	event.Raw = log
+	return event, nil
+}
+
+// DefiWithdrawnIterator is returned from FilterWithdrawn and is used to iterate over the raw logs and unpacked data for Withdrawn events raised by the Defi contract.
+type DefiWithdrawnIterator struct {
+	Event *DefiWithdrawn // Event containing the contract specifics and raw log
+
+	contract *bind.BoundContract // Generic contract to use for unpacking event data
+	event    string              // Event name to use for unpacking event data
+
+	logs chan types.Log        // Log channel receiving the found contract events
+	sub  ethereum.Subscription // Subscription for errors, completion and termination
+	done bool                  // Whether the subscription completed delivering logs
+	fail error                 // Occurred error to stop iteration
+}
+
+// Next advances the iterator to the subsequent event, returning whether there
+// are any more events found. In case of a retrieval or parsing error, false is
+// returned and Error() can be queried for the exact failure.
+func (it *DefiWithdrawnIterator) Next() bool {
+	// If the iterator failed, stop iterating
+	if it.fail != nil {
+		return false
+	}
+	// If the iterator completed, deliver directly whatever's available
+	if it.done {
+		select {
+		case log := <-it.logs:
+			it.Event = new(DefiWithdrawn)
+			if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+				it.fail = err
+				return false
+			}
+			it.Event.Raw = log
+			return true
+
+		default:
+			return false
+		}
+	}
+	// Iterator still in progress, wait for either a data or an error event
+	select {
+	case log := <-it.logs:
+		it.Event = new(DefiWithdrawn)
+		if err := it.contract.UnpackLog(it.Event, it.event, log); err != nil {
+			it.fail = err
+			return false
+		}
+		it.Event.Raw = log
+		return true
+
+	case err := <-it.sub.Err():
+		it.done = true
+		it.fail = err
+		return it.Next()
+	}
+}
+
+// Error returns any retrieval or parsing error occurred during filtering.
+func (it *DefiWithdrawnIterator) Error() error {
+	return it.fail
+}
+
+// Close terminates the iteration process, releasing any pending underlying
+// resources.
+func (it *DefiWithdrawnIterator) Close() error {
+	it.sub.Unsubscribe()
+	return nil
+}
+
+// DefiWithdrawn represents a Withdrawn event raised by the Defi contract.
+type DefiWithdrawn struct {
+	User   common.Address
+	Amount *big.Int
+	Shares *big.Int
+	Raw    types.Log // Blockchain specific contextual infos
+}
+
+// FilterWithdrawn is a free log retrieval operation binding the contract event 0x92ccf450a286a957af52509bc1c9939d1a6a481783e142e41e2499f0bb66ebc6.
+//
+// Solidity: event Withdrawn(address indexed user, uint256 amount, uint256 shares)
+func (_Defi *DefiFilterer) FilterWithdrawn(opts *bind.FilterOpts, user []common.Address) (*DefiWithdrawnIterator, error) {
+
+	var userRule []interface{}
+	for _, userItem := range user {
+		userRule = append(userRule, userItem)
+	}
+
+	logs, sub, err := _Defi.contract.FilterLogs(opts, "Withdrawn", userRule)
+	if err != nil {
+		return nil, err
+	}
+	return &DefiWithdrawnIterator{contract: _Defi.contract, event: "Withdrawn", logs: logs, sub: sub}, nil
+}
+
+// WatchWithdrawn is a free log subscription operation binding the contract event 0x92ccf450a286a957af52509bc1c9939d1a6a481783e142e41e2499f0bb66ebc6.
+//
+// Solidity: event Withdrawn(address indexed user, uint256 amount, uint256 shares)
+func (_Defi *DefiFilterer) WatchWithdrawn(opts *bind.WatchOpts, sink chan<- *DefiWithdrawn, user []common.Address) (event.Subscription, error) {
+
+	var userRule []interface{}
+	for _, userItem := range user {
+		userRule = append(userRule, userItem)
+	}
+
+	logs, sub, err := _Defi.contract.WatchLogs(opts, "Withdrawn", userRule)
+	if err != nil {
+		return nil, err
+	}
+	return event.NewSubscription(func(quit <-chan struct{}) error {
+		defer sub.Unsubscribe()
+		for {
+			select {
+			case log := <-logs:
+				// New log arrived, parse the event and forward to the user
+				event := new(DefiWithdrawn)
+				if err := _Defi.contract.UnpackLog(event, "Withdrawn", log); err != nil {
+					return err
+				}
+				event.Raw = log
+
+				select {
+				case sink <- event:
+				case err := <-sub.Err():
+					return err
+				case <-quit:
+					return nil
+				}
+			case err := <-sub.Err():
+				return err
+			case <-quit:
+				return nil
+			}
+		}
+	}), nil
+}
+
+// ParseWithdrawn is a log parse operation binding the contract event 0x92ccf450a286a957af52509bc1c9939d1a6a481783e142e41e2499f0bb66ebc6.
+//
+// Solidity: event Withdrawn(address indexed user, uint256 amount, uint256 shares)
+func (_Defi *DefiFilterer) ParseWithdrawn(log types.Log) (*DefiWithdrawn, error) {
+	event := new(DefiWithdrawn)
+	if err := _Defi.contract.UnpackLog(event, "Withdrawn", log); err != nil {
 		return nil, err
 	}
 	event.Raw = log
